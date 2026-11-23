@@ -2,6 +2,8 @@ package org.example.springboot_app_people.dto;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
+import lombok.Getter;
+import lombok.Setter;
 import org.antlr.v4.runtime.misc.NotNull;
 
 public record PeopleRequest(
