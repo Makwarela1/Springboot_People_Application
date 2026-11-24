@@ -7,19 +7,18 @@
 </head>
 <body>
 <div class = "login">
-    <h3 class="welcome"> Welcome Back </h3>
+    <h3 class="form_message"> Registration Form </h3>
 <div class = "form_content">
-     <form class = "forms" >
-         <label> Name : </label>
+     <form class = "forms" id = "userForm">
+
+         <label> Name: </label>
          <input type = "text" placeholder="Enter your name" id = "name" required>
 
-         <label> Email : </label>
+         <label> Email: </label>
          <input type="email" placeholder="Enter your email" id="email" required>
+
      </form>
-</div>
-<div class="button">
     <button class="submit" type = "submit" id="button"> Submit </button>
-</div>
 </div>
 
 <script>
@@ -28,13 +27,13 @@
     userForm.addEventListener("submit", async function (event){
         event.preventDefault();
 
-        const userDate = {
+        const userData = {
             name:document.getElementById("name").value,
             email:document.getElementById("email").value,
         };
 
         try {
-            const response = await fetch ("/api/users", { method: "POST",
+            const response = await fetch ("/api/people", { method: "POST",
 
                 headers: {
                 "Content-Type" : "application/json",
@@ -44,7 +43,7 @@
 
             const responseText = await response.text();
 
-            console.log("Status:", response.status);
+            console.log("Status: ", response.status);
             console.log("Response: ", responseText);
 
             if (!response.ok){

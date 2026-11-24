@@ -1,48 +1,48 @@
-.login {
-    background-color: aliceblue;
-    width: 800px;
-}
-
-.welcome
-{
-    display: flex;
-    justify-content: center;
-}
-
-.form_content  {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 10px;
-    gap: 10px;
-}
-
-.forms {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.button {
-    display: flex;
-    justify-content: center;
-    color: black;
-    margin-top: 10px;
-}
-
-.submit {
-    background-color: azure;
-    height: 20px;
-    border-radius: 2px;
-    padding-bottom: 10px;
-}
-
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     margin: 0;
+    background-color: #d2c7fd;
 }
 
+.login {
+    background-color: white;
+    width: 350px;
+    padding: 25px;
+}
+
+.form_message{
+    display: flex;
+    justify-content: center;
+    color: rebeccapurple;
+    margin-bottom: 25px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width:100%;
+}
+
+.form input {
+    height: 35px;
+    padding: 8px;
+}
+
+.submit {
+    height: 35px;
+    background-color: rebeccapurple;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.forms input, .submit {
+    width: 100%;
+    box-sizing: border-box;
+}
 
